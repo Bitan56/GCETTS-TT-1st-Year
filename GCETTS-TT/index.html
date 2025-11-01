@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCETSS TT 1st Year</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .menu-button{
+    background-color: inherit;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.menu{
+    display: flex;
+    gap: 17px;
+    align-items: center; 
+    justify-content: center;
+}
+
+.menu-button:hover{
+    border-bottom: 2px solid white;
+}
+
+.sidebar-menu-button{
+    background-color: inherit;
+    font-size: 21px;
+    font-weight: 600px;
+    margin-bottom: 20px;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 10px 0px;
+    transition: 0.2s ease;
+}
+
+.sidebar-menu-button:hover{
+    background-color: rgb(190, 189, 189);
+}
+
+@media (max-width: 768px){
+    .menu{
+        display: none;
+    }
+}
+    </style>
+</head>
+
+<body style="padding: 0%; margin: 0%; box-sizing: border-box; font-family: 'Poppins' , sans-serif;">
+
+    <header
+        style="margin: 5px; display: flex; background:url(assets/red\ flames\ wallpaper.jpg); background-repeat: 
+        no-repeat; background-size: cover; background-position: center; border-radius: 20px; height: 100px; position: sticky; align-items: center; justify-content: space-between; padding: 10px;  color: white;">
+
+        <button class="three-dot" style="margin-left: 10px; font-size: 28px; cursor: pointer; background-color: inherit; border: none; color: inherit;" onclick="openSideBar()"><i class="fa-solid fa-bars"></i></button>
+
+        <div class="title-text">
+            <h1>GCETTS 1st Year 25-26</h1>
+        </div>
+
+        <div class="menu">
+            <button class="menu-button" style="border-bottom: 2px solid white;"><h3>Home</h3></button>
+            <button class="menu-button"><h3>Notes</h3></button>
+            <button class="menu-button"><h3>Announcements</h3></button>
+            <button class="menu-button"><h3>Academic Essentials</h3></button>
+        </div>
+
+        <div class="dark-mode-button" style="margin-right: 10px; font-size: 28px; cursor: pointer;"><i class="fa-solid fa-moon"></i></div>
+
+    </header>
+
+    <div id="side-bar" style="position: absolute; height: 100vh; width: 400px; background-color: white; top: 0px; left: -600px; transition: 0.4s ease;">
+
+        <button class="cross" style="font-size: 32px; margin-top: 10px; margin-left: 10px; background-color: inherit; border: none; cursor: pointer;" onclick="closeSideBar()"><i class="fa-solid fa-xmark"></i></button>
+
+        <section style="display: grid; margin-top: 30px;">
+            <button class="sidebar-menu-button" style="background-color: rgb(190, 189, 189);" >Home</button>
+            <button class="sidebar-menu-button">Notes</button>
+            <button class="sidebar-menu-button">Announcements</button>
+            <button class="sidebar-menu-button">Academic Essentials</button>
+        </section>
+    </div>
+
+    <main></main>
+
+    <footer style="position: absolute; bottom: 0px; margin-left: 20px;">
+        &copy; Created by- <strong>Unity of all 1st Year TT students</strong>
+    </footer>
+
+    <script>
+
+        function openSideBar(){
+            let sideBar = document.getElementById("side-bar");
+            sideBar.style.left = "0px";
+        }
+
+        function closeSideBar(){
+            let sideBar = document.getElementById("side-bar");
+            sideBar.style.left = "-600px";
+        }
+    </script>
+
+</body>
+
+</html>
