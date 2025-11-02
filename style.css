@@ -1,11 +1,13 @@
 :root{
     --base-color: white;
     --text-color: black;
+    --primary-color: rgb(241, 240, 240);
 }
 
 .darkmode{
     --base-color: black;
     --text-color: white;
+    --primary-color: rgb(68, 68, 68);
 }
 
 *{
