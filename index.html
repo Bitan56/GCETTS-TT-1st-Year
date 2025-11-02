@@ -11,86 +11,57 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <style>
-        .menu-button{
-    background-color: inherit;
-    border: none;
-    color: white;
-    cursor: pointer;
-    transition: 0.1s ease;
-}
 
-.menu{
-    display: flex;
-    gap: 17px;
-    align-items: center; 
-    justify-content: center;
-}
-
-.menu-button:hover{
-    border-bottom: 2px solid white;
-}
-
-.sidebar-menu-button{
-    background-color: inherit;
-    font-size: 21px;
-    font-weight: 600px;
-    margin-bottom: 20px;
-    border: none;
-    color: black;
-    cursor: pointer;
-    padding: 10px 0px;
-    transition: 0.2s ease;
-}
-
-.sidebar-menu-button:hover{
-    background-color: rgb(190, 189, 189);
-}
-
-body.dark-mode{
-    background-color: #121212;
-    color: white;
-}
-
-@media (max-width: 768px){
-    .menu{
-        display: none;
-    }
-}
     </style>
 </head>
 
-<body style="padding: 0%; margin: 0%; box-sizing: border-box; font-family: 'Poppins' , sans-serif;">
+<body>
 
     <header
         style="margin: 5px; display: flex; background:url(GCETTS-TT/assets/red\ flames\ wallpaper.jpg); background-repeat: 
         no-repeat; background-size: cover; background-position: center; border-radius: 20px; height: 100px; position: sticky; align-items: center; justify-content: space-between; padding: 10px;  color: white;">
 
-        <button class="three-dot" style="margin-left: 10px; font-size: 28px; cursor: pointer; background-color: inherit; border: none; color: inherit;" onclick="openSideBar()"><i class="fa-solid fa-bars"></i></button>
+        <button class="three-dot"
+            style="margin-left: 10px; font-size: 28px; cursor: pointer; background-color: inherit; border: none; color: inherit;"
+            onclick="openSideBar()"><i class="fa-solid fa-bars"></i></button>
 
         <div class="title-text">
             <h1>GCETTS 1st Year 25-26</h1>
         </div>
 
         <div class="menu">
-            <button class="menu-button" style="border-bottom: 2px solid white;"><h3>Home</h3></button>
-            <button class="menu-button"><h3>Notes</h3></button>
-            <button class="menu-button"><h3>Announcements</h3></button>
-            <button class="menu-button"><h3>About our College</h3></button>
+            <button class="menu-button" style="border-bottom: 2px solid white;">
+                <h3>Home</h3>
+            </button>
+            <button class="menu-button">
+                <h3>Notes</h3>
+            </button>
+            <button class="menu-button">
+                <h3>Announcements</h3>
+            </button>
+            <button class="menu-button">
+                <h3>About our College</h3>
+            </button>
         </div>
 
-        <div id="dark-mode-button" style="margin-right: 10px; font-size: 28px; cursor: pointer;" onclick="darkMode()"><i class="fa-solid fa-moon"></i></div>
+        <div id="dark-mode-button" style="margin-right: 10px; font-size: 28px; cursor: pointer;">
+            <i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i>
+        </div>
 
     </header>
 
-    <div id="side-bar" style="position: absolute; height: 100vh; width: 300px; background-color: white; top: 0px; left: -600px; transition: 0.4s ease;">
+    <div id="side-bar">
 
-        <button class="cross" style="font-size: 32px; margin-top: 10px; margin-left: 10px; background-color: inherit; border: none; cursor: pointer;" onclick="closeSideBar()"><i class="fa-solid fa-xmark"></i></button>
+        <button class="cross"
+            style="font-size: 32px; margin-top: 10px; margin-left: 10px; background-color: inherit; border: none; cursor: pointer;"
+            onclick="closeSideBar()"><i class="fa-solid fa-xmark"></i></button>
 
-        <section style="display: grid; margin-top: 30px;">
-            <button class="sidebar-menu-button" style="background-color: rgb(190, 189, 189);" >Home</button>
+        <section id="side-bar-menu-list" style="display: grid; margin-top: 30px; color: inherit;">
+            <button class="sidebar-menu-button" style="background-color: rgb(190, 189, 189);">Home</button>
             <button class="sidebar-menu-button">Notes</button>
             <button class="sidebar-menu-button">Announcements</button>
             <button class="sidebar-menu-button">Academic Essentials</button>
@@ -98,41 +69,47 @@ body.dark-mode{
         </section>
     </div>
 
-    <main></main>
+    <main>
 
-    <footer style="position: absolute; bottom: 0px; margin-left: 20px;">
+    </main>
+
+    <footer style="position: absolute; bottom: 0px; margin-left: 20px; color: inherit;">
         &copy; Created by- <strong>Unity of all 1st Year TT students</strong>
     </footer>
 
     <script>
 
-        function openSideBar(){
+        function openSideBar() {
             let sideBar = document.getElementById("side-bar");
             sideBar.style.left = "0px";
         }
 
-        function closeSideBar(){
+        function closeSideBar() {
             let sideBar = document.getElementById("side-bar");
             sideBar.style.left = "-600px";
         }
 
-        const toggle = document.getElementById("dark-mode-button");
-        toggle.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
+        let darkmode = localStorage.getItem('darkmode')
+        const themeSwitch = document.getElementById('dark-mode-button')
 
-            if(document.body.classList.contains("dark-mode")){
-                toggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
-                localStorage.setItem("theme", "dark");
-            }else{
-                toggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
-                localStorage.setItem("theme", "light");
-            }
-        });
-
-        if(localStorage.getItem("theme") === "dark"){
-            toggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
-            document.body.classList.add("dark-mode");
+        const enableDarkmode = () => {
+            document.documentElement.classList.add('darkmode')
+            localStorage.setItem('darkmode', 'active')
         }
+
+        const disableDarkmode = () => {
+            document.documentElement.classList.remove('darkmode')
+            localStorage.setItem('darkmode', null)
+        }
+
+        if(darkmode === "active"){
+            enableDarkmode()
+        }
+
+        themeSwitch.addEventListener("click", () => {
+            darkmode = localStorage.getItem('darkmode')
+            darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+        })
 
     </script>
 
