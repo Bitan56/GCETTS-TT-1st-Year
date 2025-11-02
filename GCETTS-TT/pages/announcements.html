@@ -101,13 +101,25 @@
 
         .card {
             width: 500px;
-            height: 300px;
+            height: 150px;
             display: grid;
             align-items: center;
-            text-align: center;
             background-color: var(--primary-color);
             color: var(--text-color);
             border-radius: 20px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .card-btn{
+            width: fit-content;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: purple;
+            color: white;
+            cursor: pointer;
+            border: none;
+            margin: auto;
         }
 
         #dark-mode-button i:last-child {
@@ -137,7 +149,7 @@
 <body>
 
     <header
-        style="margin: 5px; display: flex; background:url(GCETTS-TT/assets/red\ flames\ wallpaper.jpg); background-repeat: 
+        style="margin: 5px; display: flex; background:url(../../GCETTS-TT/assets/red\ flames\ wallpaper.jpg); background-repeat: 
         no-repeat; background-size: cover; background-position: center; border-radius: 20px; height: 100px; position: sticky; align-items: center; justify-content: space-between; padding: 10px;  color: white;">
 
         <button class="three-dot"
@@ -149,13 +161,13 @@
         </div>
 
         <div class="menu">
-            <button class="menu-button" style="border-bottom: 2px solid white;">
+            <button class="menu-button">
                 <h3>Home</h3>
             </button>
             <button class="menu-button">
                 <h3>Notes</h3>
             </button>
-            <button class="menu-button" onclick="window.open('GCETTS-TT/pages/announcements.html')">
+            <button class="menu-button" style="border-bottom: 2px solid white;">
                 <h3>Announcements</h3>
             </button>
             <button class="menu-button" onclick="window.open('https://www.gcetts.ac.in/')">
@@ -181,23 +193,21 @@
     <main style="padding: 20px 20px; display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
 
         <div class="card">
-            <h3>WHAT'S NEW ?</h3>
-            <p>Brand new UI and addition of Dark Mode</p>
+            <h3 style="margin-left: 5px;">Induction program schedule published</h3>
+            <button class="card-btn" onclick="window.open('https://drive.google.com/file/d/13YYwcXkyUgYA84ykXvrufhtHCj8qMIcs/view?usp=drivesdk')">Click here</button>
         </div>
         <div class="card">
-            <h3>WHY THERE IS NO SKILL AND LIBRARY SECTION ?</h3>
-            <p>The skills and library sections are currently under development. <br>
-                It will be uploaded as soon as the development process gets finished.</p>
+            <h3 style="margin-left: 5px;">Result of our CR voting process has been announced !!</h3>
+            <button class="card-btn" onclick="window.open('https://docs.google.com/document/d/e/2PACX-1vTtSFGWzUNuTddr0GXTgBAdhZMOO9lLDIpauSiGNVdpnP9A88zXknlqxN7d2Yg8e0TY1ufOOEE9zfD6/pub')">Click here</button>
         </div>
         <div class="card">
-            <h3>IS THE NEW WEBSITE SAME AS BEFORE ?</h3>
-            <p>Yes, it's same but upgraded.</p>
+            <h3 style="margin-left: 5px;">Notice regarding Mandatory registration for ABC id</h3>
+            <button class="card-btn" onclick="window.open('https://drive.google.com/file/d/10GWrOiJdBEW6fwM-uxhW0YLVCvhUqx_Q/view?usp=drivesdk')">Click here</button>
         </div>
         <div class="card">
-            <h3>DO OUR FEEDBACK MATTERS ?</h3>
-            <p>Absolutly, if you have any feedback or advice, do let me know.</p>
+            <h3 style="margin-left: 5px;">Notice regarding comencement of SIP</h3>
+            <button class="card-btn" onclick="window.open('https://drive.google.com/file/d/1SyMI1vXp-CIBElrUAlxqe1enfXDAYHXz/view?usp=drivesdk')">Click here</button>
         </div>
-
     </main>
 
     <footer style="position: relative; bottom: 0px; margin-left: 20px; color: inherit;">
@@ -211,14 +221,14 @@
             onclick="closeSideBar()"><i class="fa-solid fa-xmark"></i></button>
 
         <section style="height: 50px; width: 50px; margin: auto;">
-            <img src="GCETTS-TT/assets/GCETTS logo.jpg" height="50px" width="50px" alt="">
+            <img src="../../GCETTS-TT/assets/GCETTS logo.jpg" height="50px" width="50px" alt="">
         </section>
 
         <section id="side-bar-menu-list" style="display: grid; margin-top: 30px; color: inherit;">
-            <button class="sidebar-menu-button" style="background-color: rgb(190, 189, 189);">Home</button>
+            <button class="sidebar-menu-button">Home</button>
             <button class="sidebar-menu-button">Notes</button>
-            <button class="sidebar-menu-button">Announcements</button>
-            <button class="sidebar-menu-button" onclick="window.open('GCETTS-TT/pages/academic-essentials.html')">Academic Essentials</button>
+            <button class="sidebar-menu-button" style="background-color: rgb(190, 189, 189);">Announcements</button>
+            <button class="sidebar-menu-button">Academic Essentials</button>
             <button class="sidebar-menu-button" onclick="window.open('https://www.gcetts.ac.in/')">About our
                 College</button>
         </section>
