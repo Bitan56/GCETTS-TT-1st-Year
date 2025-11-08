@@ -4,7 +4,7 @@ const sideBarMenu = document.getElementById("side-bar-menu-list")
 // the announcement bar
 rollingText.innerHTML = "Our website has been <strong>UPGRADED !!</strong>";
 
-sideBarMenu = `<button class="sidebar-menu-button" style="background-color: rgb(190, 189, 189);">Home</button>
+sideBarMenu.innerHTML = `<button class="sidebar-menu-button" style="background-color: rgb(190, 189, 189);">Home</button>
             <button class="sidebar-menu-button" onclick="location.href = 'GCETTS-TT/pages/notes.html';">Notes</button>
             <button class="sidebar-menu-button" onclick="location.href = 'GCETTS-TT/pages/announcements.html';">Announcements</button>
             <button class="sidebar-menu-button" onclick="location.href = 'GCETTS-TT/pages/academic-essentials.html';">Academic Essentials</button>
