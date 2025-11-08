@@ -9,5 +9,4 @@ sideBarMenu.innerHTML = `<button class="sidebar-menu-button" style="background-c
             <button class="sidebar-menu-button" onclick="location.href = 'GCETTS-TT/pages/announcements.html';">Announcements</button>
             <button class="sidebar-menu-button" onclick="location.href = 'GCETTS-TT/pages/academic-essentials.html';">Academic Essentials</button>
             <button class="sidebar-menu-button" onclick="window.open('https://www.gcetts.ac.in/')">About our
-                College</button>
-                <button class="sidebar-menu-button" onclick="location.href = 'GCETTS-TT/pages/contact-us.html';">Contact Us</button>`
+                College</button>`
