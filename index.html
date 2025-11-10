@@ -16,7 +16,6 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <style>
-        
         :root {
             --base-color: white;
             --text-color: black;
@@ -218,11 +217,46 @@
         </section>
 
         <section id="side-bar-menu-list" style="display: grid; margin-top: 30px; color: inherit;">
-            
+
         </section>
+
+        <div id="notif-blck"
+            style="position: absolute; left: 0; top: 0; background-color: rgba(000, 000, 000, 0.8); height: 100vh; width: 100%; position: fixed; transition: 0.5s ease;">
+            <section
+                style="width: 450px; height: 550px; background-color: var(--base-color); margin: auto; align-items: center; margin-top: 30px; padding: 50px 20px; transition: 1s ease; border-radius: 20px; color: var(--text-color);">
+                <button class="cross"
+                    style="font-size: 32px; margin-top: 10px; margin-left: 10px; background-color: inherit; border: none; cursor: pointer;"
+                    onclick="closeNoticeBox()"><i class="fa-solid fa-xmark"></i></button>
+
+                <h1><strong>Important Announcement Related to CA1 and CA2!!</strong></h1>
+                <p style="margin-top: 30px;">BK sir alongwith PKM sir confirmed the following points:</p>
+                <section
+                    style=" height: 200px; overflow-y: scroll; margin-top: 40px; background-color: var(--primary-color); padding: 5px; border-radius: 10px;">
+                    <ol type="1">
+                        <li>1. The ppt file should be saved in pdf format.</li>
+                        <li>2. It is better to keep the file size within 2MB.</li>
+                        <li>3. MAKAUT university has not announced the ppt submition date yet.So, better not to hurry.
+                        </li>
+                        <li>4. If time permits we may have to give a presentation on your ppt.So, better to stay
+                            prepared.</li>
+                        <li>5. The topic of CA1 and CA2 will be same.</li>
+                        <li>6. It may happen that the university gives only 2-3 days of time span between submission of
+                            two CAs.So, it's better to keep CA2 prepared.</li>
+                        <li>7. CA topic list is already published in our Whatsapp groups.</li>
+                    </ol>
+                </section>
+            </section>
+        </div>
+
     </div>
 
     <script>
+
+        const noticeBox = document.getElementById("notif-blck")
+
+        function closeNoticeBox() {
+            noticeBox.style.display = "none";
+        }
 
         function openSideBar() {
             let sideBar = document.getElementById("side-bar");
